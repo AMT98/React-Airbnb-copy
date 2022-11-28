@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = (props) => {
+    console.log(props)
+    return (
+        <div id="card">
+            <img className="zaferesImg" src= {props.img} alt="zaferes pic"></img>
+            <div>
+                <img className="starImg" src={require("./images/star.png")} alt="star"></img>
+                <span>{props.rating} <small>{props.noOfPeople}- USA</small></span>
+            </div>
+            <p>{props.title}</p>
+            <p><b>{props.cost}</b>/ person</p>
+        </div>
+    )
 }
-
-export default App;
